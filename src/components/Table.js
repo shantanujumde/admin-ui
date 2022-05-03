@@ -3,7 +3,7 @@ import TableRow from './TableRow'
 import GetRecords from "../utils/GetRecords"
 import Footer from './Footer'
 
-const Table = ({search}) => {
+const Table = ({ search }) => {
     const [dataStore, setDataStore] = useState([])  // contains Original copy of data
     const [tableRow, setTableRow] = useState([])  // contains all data
     const [visibleData, setVisibleData] = useState([]) // visible data on curr page
@@ -23,7 +23,7 @@ const Table = ({search}) => {
     }, [tableRow])
     // pagination function
     const pagination = (button) => {
-        console.log(selectedData);
+        // console.log(selectedData);
         if (button === undefined)
             setVisibleData(tableRow.slice(0, 10))
         else
@@ -41,9 +41,6 @@ const Table = ({search}) => {
     // delete row function
     const deleteSelected = (selectedData, visibleData, tableRow, setTableRow) => {
         let allData = [...tableRow]
-        if (selectAllbox) {
-            setSelectAllbox(!selectAllbox)
-        }
         for (let j = 0; j < visibleData.length; j++) {
             if (selectedData.includes(visibleData[j].id)) {
                 allData = allData.filter((val) => {
@@ -52,16 +49,18 @@ const Table = ({search}) => {
             }
         }
         setTableRow(allData)
+        setSelectAllbox(false)
+
     }
 
     // search function
-    useEffect(()=>{
-        searchFilter(search.toLowerCase(),dataStore,setTableRow )
-    },[search])
-    const searchFilter=(search, dataStore,setTableRow)=>{
+    useEffect(() => {
+        searchFilter(search.toLowerCase(), dataStore, setTableRow)
+    }, [search, dataStore])
+    const searchFilter = (search, dataStore, setTableRow) => {
         let res = []
         for (let j = 0; j < dataStore.length; j++) {
-            if (dataStore[j].name.toLowerCase().includes(search) || dataStore[j].email.toLowerCase().includes(search) || dataStore[j].role.toLowerCase().includes(search)){
+            if (dataStore[j].name.toLowerCase().includes(search) || dataStore[j].email.toLowerCase().includes(search) || dataStore[j].role.toLowerCase().includes(search)) {
                 res.push(dataStore[j])
             }
         }
@@ -71,14 +70,14 @@ const Table = ({search}) => {
 
     //handle edit
     // const editRow()
-    
+
     return (
         <>
             <table className="table">
                 <thead>
                     <tr>
                         <th scope="col">
-                            <input onChange={() => selectAll()} defaultChecked={selectAllbox} className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                            <input onChange={() => selectAll()} checked={selectAllbox} className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                         </th>
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>

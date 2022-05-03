@@ -25,7 +25,7 @@ export default function Footer({ dataLen, pagination, deleteSelected, selectedDa
 
     }
     useEffect(() => {
-        console.log(currPage, Math.floor(dataLen / 10));
+        // console.log(currPage, Math.floor(dataLen / 10));
 
         if (currPage === Math.floor(dataLen / 10)) {
             setRightDisabled(true)
@@ -45,8 +45,8 @@ export default function Footer({ dataLen, pagination, deleteSelected, selectedDa
     }, [])
     return (
         <footer className=" row" >
-            <div className='col-2'>
-                <button onClick={() => deleteSelected(selectedData, visibleData, tableRow, setTableRow)} className='btn btn-danger' style={{ borderRadius: "25%" }}>
+            <div className='col-2 text-center p-3' >
+                <button onClick={() => deleteSelected(selectedData, visibleData, tableRow, setTableRow)} className='btn btn-danger' style={{ borderRadius: "20px" }}>
                     Delete Selected
                 </button>
             </div>
