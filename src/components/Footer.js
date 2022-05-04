@@ -21,12 +21,8 @@ export default function Footer({ dataLen, pagination, deleteSelected, selectedDa
                 pagination(newPage)
             }
         }
-
-
     }
     useEffect(() => {
-        // console.log(currPage, Math.floor(dataLen / 10));
-
         if (currPage === Math.floor(dataLen / 10)) {
             setRightDisabled(true)
         }

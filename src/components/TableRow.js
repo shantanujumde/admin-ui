@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
 const TableRow = ({ row, index, checked, selectedData, setSelectedData, deleteSelected, visibleData, tableRow, setTableRow }) => {
-    // console.log(selectedData);
     const [editable, setEditable] = useState(false)
     const selectUnselect = () => {
         if (checked) {
@@ -18,7 +17,6 @@ const TableRow = ({ row, index, checked, selectedData, setSelectedData, deleteSe
     const updateDataStore = (index, name, email, role, tableRow, setTableRow) => {
         setEditable(!editable)
         if (editable) {
-            // console.log(tableRow[index].name);
             tableRow[index].name = name
             tableRow[index].email = email
             tableRow[index].role = role
