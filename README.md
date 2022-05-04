@@ -1,5 +1,14 @@
 
 ### `npm start`
+
+### Used Methods and Technologies
+### `Debouncing`
+### `Pagination`
+### `Search and Filter`
+### `React Functional Components` 
+### `BootStrap-5`
+### `JavaScript`
+
 ### UI
 ![image](https://user-images.githubusercontent.com/53818773/166484982-c6c5e52d-4e98-4efd-87bc-72f11dc0d53b.png)
 
@@ -14,10 +23,9 @@ Multiple select and select all functionality
 
 ### Delete
 Delete button to delete all selections at once and delete icon to delete one record at once
-![image](https://user-images.githubusercontent.com/53818773/166485584-13acd5c5-fd27-4d68-bf05-1e9c2b08c9e2.png)
-![image](https://user-images.githubusercontent.com/53818773/166485615-30ac1659-a842-4cef-b4d0-0677c2ed4e39.png)
+![image](https://user-images.githubusercontent.com/53818773/166485584-13acd5c5-fd27-4d68-bf05-1e9c2b08c9e2.png)![image](https://user-images.githubusercontent.com/53818773/166619469-0cc23ae8-68ef-48a5-a55a-f7e8f73eb4df.png)
 
 
-###Edit
+### Edit
 Edit functionality to edit records at place
 ![image](https://user-images.githubusercontent.com/53818773/166485808-6d228a40-9efc-49f5-962e-4e30a5b956b8.png)
