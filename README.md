@@ -1,5 +1,14 @@
 
 ### `npm start`
+
+### Used Methods and Technologies
+## Debouncing
+## Pagination
+## Search and Filter
+## React Functional Components 
+## BootStrap-5
+## JavaScript 
+
 ### UI
 ![image](https://user-images.githubusercontent.com/53818773/166484982-c6c5e52d-4e98-4efd-87bc-72f11dc0d53b.png)
 
